@@ -4,4 +4,4 @@ UIC, ECE464, Fall 2019
 
 Group members:
 
-Peter Chen
+Peter Chen, Krishna Vivek Reddy
