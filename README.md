@@ -1,10 +1,11 @@
-UIC, ECE464, Fall 2019
-Instructor: Dr. Wenjing Rao
-Github repo for Group 9, project 1
-Group members:
-Peter Chen
-Vivek Reddy
-Brian Campbell
+UIC, ECE464, Fall 2019  
+Instructor: Dr. Wenjing Rao  
+Github repo for Group 9, project 1  
+Group members:  
+Peter Chen  
+Vivek Reddy  
+Brian Campbell  
+
 
 # Logic Simulator
 ## Table Contents:
