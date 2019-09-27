@@ -3,7 +3,7 @@ Instructor: Dr. Wenjing Rao
 Github repo for Group 9, project 1  
 Group members:  
 Peter Chen  
-Vivek Reddy  
+Krishna Vivek Reddy  
 Brian Campbell  
 
 
