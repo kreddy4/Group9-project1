@@ -503,6 +503,9 @@ def main():
     inputFile1 = open(inputName1, "r")
 
     outputFile = open(outputName, "w")
+    
+    out="#fault sim result\n"+"#input:circuit.bench\n"+"#input:circuit.bench\n"+"#input:f_list.txt\n\n"
+    outputFile.write(out)
 
     # Runs the simulator for each line of the input file
     for line in inputFile1:
@@ -620,24 +623,22 @@ def main():
             else:
                 #for fault in stucks:eg: A-IN-B-SA-0
                 ip=line1.split("-")
+                v=ip[4]
+                i0=ip[0]
                 ip=ip[2]
-                va=ip[4]
-                ip="wire_"+ip[2]
-                que= list(circuit["GATES"][1])
+                i0=str("wire_"+i0)
+                ip=str("wire_"+ip)
+                que= list(nc["GATES"][1])
                 for ele in que:
                     for e in ele[1]:
-                        if(e==ip):
-                            e[3]=va
 
+                        print("test3",ele,type(ele),ip,type(ip))
+                        if((e==ip) and ele==i0):
+                            print(e,v)
 
-                st["wire_"+ip]=line1[len(line1)-1]
-                p=str("wire_")+str(ip)
-                l=len(p)
-
-                for key in nc:
-                    if (key[0:l]==p):
-                        nc[key][2] = True
-                        nc[key][3] = line1[len(line1)-1]
+                            st1[nc[e][3]]=v
+                            print(st1,e[3],"test")
+                            break
 
 
             print("\n ---> Now ready to simulate fault = " + line1)
@@ -674,7 +675,8 @@ def main():
             print("\n *** Summary of simulation: ")
             print(line + " -> " + output3 + " written into output file. \n")
             if(output!=output3):
-
+                ot="Detected:"
+                outputFile.write(ot)
                 o=line1 +":"+ line+"-> " + output3 + "\n"
                 outputFile.write(o)
 
